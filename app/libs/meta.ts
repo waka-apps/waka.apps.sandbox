@@ -1,3 +1,5 @@
+import { BLOG_TITLE } from "~/root";
+
 export function getMeta(
   title: string,
   description: string,
@@ -29,7 +31,7 @@ export function getMeta(
     },
     {
       property: "og:site_name",
-      content: "Waka blog sandbox.",
+      content: BLOG_TITLE,
     },
     {
       property: "og:url",
