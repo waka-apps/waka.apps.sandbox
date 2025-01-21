@@ -28,9 +28,13 @@ export const Categories: FC<Props> = ({ categories }: Props) => {
         .sort((a, b) => a.name.localeCompare(b.name))
         .slice(0, loadMore ? 100 : 10)
         .map((category) => (
-          <Link key={category.id} to={`categories/${category.id}`}>
-            <p className="text-gray-600 text-sm pl-2 pb-2">{category.name}</p>
-          </Link>
+          <a
+            href={`${import.meta.env.VITE_MAIN_SITE_URL}/categories/${category.id}`}
+            key={category.id}
+            className="text-gray-600 text-sm pl-2 pb-2 block"
+          >
+            {category.name}
+          </a>
         ))}
       <button
         className="text-gray-600 text-sm pl-4 pb-2 font-bold cursor-pointer bg-transparent border-none p-0"
