@@ -4,8 +4,8 @@ import type { FC } from "react";
 export const StickyMenu: FC = () => {
   const location = useLocation();
 
-  const blogBorder = location.pathname === "border-gray-200";
-  const aboutBorder = location.pathname === "border-gray-200";
+  const blogBorder = "border-gray-200";
+  const aboutBorder = "border-gray-200";
   const sandboxBorder = location.pathname === "/" ? "border-gray-600" : "border-gray-200";
 
   return (
