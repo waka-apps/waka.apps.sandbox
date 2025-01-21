@@ -6,39 +6,23 @@ export const MobileProfile: FC = () => {
   return (
     <div className="pt-8 w-full">
       <div className="flex">
-        <Link to="/about">
+        <a href={`${import.meta.env.VITE_MAIN_SITE_URL}/about`}>
           <div className="mb-4">
-            <img
-              className="w-20 h-20 rounded-full"
-              src="/ava.webp"
-              alt="Description"
-            ></img>
+            <img className="w-20 h-20 rounded-full" src="/ava.webp" alt="Description"></img>
           </div>
-        </Link>
+        </a>
         <div className="ml-8">
           <div className="flex space-x-4">
-            <Link to="/about">
+            <a href={`${import.meta.env.VITE_MAIN_SITE_URL}/about`}>
               <p className="mb-4">waka.apps</p>
-            </Link>
-            <a
-              href="https://github.com/waka-apps"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            </a>
+            <a href="https://github.com/waka-apps" target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
-            <a
-              href="https://twitter.com/appsapw"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://twitter.com/appsapw" target="_blank" rel="noopener noreferrer">
               <FaXTwitter />
             </a>
-            <a
-              href="https://www.instagram.com/waka.apps/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.instagram.com/waka.apps/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
           </div>

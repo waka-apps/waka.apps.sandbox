@@ -9,9 +9,9 @@ export const ContentHeader: FC<Props> = ({ title }: Props) => {
   return (
     <header className={`pt-8 md:pt-16 w-full `}>
       <h1 className="text-4xl font-light">
-        <Link to="/" aria-label={title}>
+        <a href={`${import.meta.env.VITE_MAIN_SITE_URL}`} aria-label={title}>
           {title}
-        </Link>
+        </a>
       </h1>
     </header>
   );

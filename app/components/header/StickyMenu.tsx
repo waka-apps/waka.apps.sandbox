@@ -21,11 +21,11 @@ export const StickyMenu: FC = () => {
             <span className="text-gray-600 text-sm">About</span>
           </div>
         </a>
-        <Link to={"/"}>
+        <a href={`${import.meta.env.VITE_MAIN_SITE_URL}`}>
           <div className={`border-b w-14 text-center pb-2 ${sandboxBorder}`}>
             <span className="text-gray-600 text-sm">Sandbox</span>
           </div>
-        </Link>
+        </a>
       </div>
     </header>
   );
