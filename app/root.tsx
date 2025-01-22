@@ -1,5 +1,4 @@
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from "react-router";
-
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
 import { client } from "./libs/client.server";
