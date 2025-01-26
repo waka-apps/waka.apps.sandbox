@@ -1,13 +1,30 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Row } from "~/components/posts/Row";
+import type { Post } from "~/types/post";
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "シンプル一覧ページ" },
+    { name: "description", content: "Tailwind CSSで作成したシンプルな一覧ページです" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  // サンプルデータ
+  const posts: Post[] = [
+    {
+      id: "tumblr",
+      title: "Tumble API sample",
+      content: "Tumblr APIのサンプル",
+      publishedAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    },
+  ];
+
+  return (
+    <div>
+      {posts.map((post) => (
+        <Row key={post.id} post={post} />
+      ))}
+    </div>
+  );
 }
