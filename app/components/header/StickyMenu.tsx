@@ -1,9 +1,7 @@
-import { useLocation } from "react-router";
 import type { FC } from "react";
+import { Link } from "react-router";
 
 export const StickyMenu: FC = () => {
-  const location = useLocation();
-
   const blogBorder = "border-gray-200";
   const aboutBorder = "border-gray-200";
   const sandboxBorder = "border-gray-600";
@@ -21,11 +19,11 @@ export const StickyMenu: FC = () => {
             <span className="text-gray-600 text-sm">About</span>
           </div>
         </a>
-        <a href={`${import.meta.env.VITE_MAIN_SITE_URL}`}>
+        <Link to={"/"}>
           <div className={`border-b w-14 text-center pb-2 ${sandboxBorder}`}>
             <span className="text-gray-600 text-sm">Sandbox</span>
           </div>
-        </a>
+        </Link>
       </div>
     </header>
   );
