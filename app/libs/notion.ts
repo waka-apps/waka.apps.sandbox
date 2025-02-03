@@ -21,7 +21,7 @@ export async function fetchNotionPages(): Promise<NotionResponse> {
     database_id: NOTION_DATABASE_ID,
     sorts: [
       {
-        property: "日付",
+        property: "CreatedAt",
         direction: "descending",
       },
     ],
