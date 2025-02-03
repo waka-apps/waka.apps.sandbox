@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router";
+import { useLocation } from "react-router";
 import type { FC } from "react";
 
 export const StickyMenu: FC = () => {

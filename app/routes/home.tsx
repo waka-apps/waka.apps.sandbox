@@ -2,19 +2,16 @@ import { Row } from "~/components/posts/Row";
 import type { Post } from "~/types/post";
 
 export function meta() {
-  return [
-    { title: "シンプル一覧ページ" },
-    { name: "description", content: "Tailwind CSSで作成したシンプルな一覧ページです" },
-  ];
+  return [{ title: "Sandbox一覧ページ" }, { name: "description", content: "Sandbox一覧ページ" }];
 }
 
 export default function Home() {
   // サンプルデータ
   const posts: Post[] = [
     {
-      id: "tumblr",
-      title: "Tumble API sample",
-      content: "Tumblr APIのサンプル",
+      id: "notion",
+      title: "Notion API sample",
+      content: "Notion APIのサンプル",
       publishedAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     },

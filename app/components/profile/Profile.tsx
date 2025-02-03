@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import type { FC } from "react";
 import { FaGithub, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import type { Category } from "~/types/category";
