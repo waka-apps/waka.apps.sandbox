@@ -29,15 +29,20 @@ export type NotionPage = {
       type: "url";
       url: string | null;
     };
-    日付: {
+    CreatedAt: {
       id: string;
-      type: "date";
-      date: string | null;
+      type: "created_time";
+      created_time: string | null;
     };
     SourceTitle: {
+      id: string;
+      type: "rich_text";
+      title: NotionRichText[];
+    };
+    QuoteText: {
       id: "title";
       type: "title";
-      title: NotionRichText[];
+      rich_text: NotionRichText[];
     };
   };
   url: string;
