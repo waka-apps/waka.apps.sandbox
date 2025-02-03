@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router";
+import { Row } from "~/components/notion/Row";
 import { fetchNotionPages } from "~/libs/notion";
 
 export async function loader() {
@@ -23,5 +24,11 @@ export default function NotionSample() {
     return <div className="text-red-500">{error}</div>;
   }
 
-  return <div>{JSON.stringify(response)}</div>;
+  return (
+    <div>
+      {response?.results.map((notionPage) => (
+        <Row key={notionPage.id} notionPage={notionPage} />
+      ))}
+    </div>
+  );
 }

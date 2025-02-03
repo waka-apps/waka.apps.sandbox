@@ -6,7 +6,7 @@ export const StickyMenu: FC = () => {
 
   const blogBorder = "border-gray-200";
   const aboutBorder = "border-gray-200";
-  const sandboxBorder = location.pathname === "/" ? "border-gray-600" : "border-gray-200";
+  const sandboxBorder = "border-gray-600";
 
   return (
     <header className={`sticky top-0 w-full pt-8 bg-white`}>
