@@ -1,5 +1,4 @@
 import { format } from "@formkit/tempo";
-import { Link } from "react-router";
 import { memo } from "react";
 import type { FC } from "react";
 import type { NotionPage } from "~/types/notion";
@@ -38,12 +37,8 @@ export const Row: FC<Props> = memo(({ notionPage }: Props) => {
           {formatDate()}
         </time>
       </div>
-      <h2 className="text-xl font-bold mb-2">
-        <Link to={`/${notionPage.id}`}>{getTitle()}</Link>
-      </h2>
-      <div className="h-13 mb-6 overflow-hidden line-clamp-2">
-        <Link to={`/${notionPage.id}`}>{getContent()}</Link>
-      </div>
+      <h2 className="text-xl font-bold mb-2">{getTitle()}</h2>
+      <div className="h-13 mb-6 overflow-hidden line-clamp-2">{getContent()}</div>
     </article>
   );
 });
