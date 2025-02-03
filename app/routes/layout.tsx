@@ -1,4 +1,5 @@
 import { Outlet, type MetaFunction } from "react-router";
+import { Breadcrumbs } from "~/components/breadclumbs/Breadclumbs";
 import { ContentHeader } from "~/components/header/ContentlHeader";
 import { StickyMenu } from "~/components/header/StickyMenu";
 import { MobileProfile } from "~/components/profile/MobileProfile";
@@ -24,6 +25,7 @@ export default function Layout() {
         <StickyMenu />
       </div>
       <div className="space-y-0">
+        <Breadcrumbs />
         <Outlet />
       </div>
     </>
